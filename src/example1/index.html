@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/style.css" />
 
     <script src="https://static.lyra.com/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
-        kr-public-key="31592691:publickey_1Z6SOL2LDGGtg2mSIBb2GMeda3zMyvSwXUO1WW3qoTwNE">
+        kr-public-key="31592691:publickey_1Z6SOL2LDGGtg2mSIBb2GMeda3zMyvSwXUO1WW3qoTwNE" kr-form-token="{{formToken}}">
         </script>
     <link rel="stylesheet" href="https://static.lyra.com/static/js/krypton-client/V4.0/ext/neon-reset.css">
     <script src="https://static.lyra.com/static/js/krypton-client/V4.0/ext/neon.js"></script>
@@ -19,8 +19,10 @@
 
 <body>
     <div class="my-payment-form">
-        <div class="kr-smart-form" kr-grid kr-card-form-expanded></div>
+        <div class="kr-smart-form" kr-grid kr-card-form-expanded>
+        </div>
     </div>
+
 </body>
 
 <script src="paymentForm.js"></script>
