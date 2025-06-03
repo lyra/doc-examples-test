@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Inter"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/assets/demo-site.css" />
+
+    <block name="payment-form-load-zone"></block>
+
+    <style>
+      .summary-container {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .mode-button {
+        background-color: #e2e8f0;
+        width: 55px;
+        height: 41.01px;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .title-text-summary {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .kr-smart-form {
+        width: 400px !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="navigation-form-wrapper desktop">
+      <div class="navigation-form">
+        <a href="/"><img src="/assets/images/lyra-header.svg" alt="lyra" /></a>
+        <div class="header-links">
+          <span class="header-link">Home</span>
+          <span class="header-link">Shop</span>
+          <span class="header-link">Contact</span>
+          <span class="header-link">Help</span>
+        </div>
+        <div class="right-header-links">
+          <span class="cart-link">
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#configModal"
+              src="/assets/images/shopping-bag.svg"
+            />
+            <span>1 Item</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation-form-wrapper-mobile mobile">
+      <div class="navigation-form-mobile">
+        <a href="/"
+          ><img src="/assets/images/lyra-header-small.svg" alt="lyra"
+        /></a>
+        <div class="header-links-mobile">
+          <span class="header-link-mobile">Shop</span>
+          <span class="header-link-mobile">Contact</span>
+        </div>
+        <div class="right-header-links-mobile">
+          <span class="cart-link-mobile">
+            <img
+              data-bs-toggle="modal"
+              data-bs-target="#configModal"
+              src="/assets/images/shopping-bag.svg"
+            />
+            <span>1</span>
+          </span>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <section class="order-section-mobile gray-section mobile">
+        <div class="order-title-container-mobile">
+          <div class="title-text-mobile">Order Summary</div>
+          <div class="discount-apply-mobile">
+            <span>Test</span>
+          </div>
+        </div>
+        <div class="headphones-section-mobile">
+          <div class="headphones-image-container-mobile">
+            <img src="/assets/images/headphones-small.png" />
+          </div>
+          <div class="headphones-description-mobile">
+            <div class="headphones-description-first-part-mobile">
+              <span class="item-name-text-mobile">Headphones</span>
+              <div class="shipping-container-mobile">
+                <span class="shipping-mobile">Shipping</span>
+                <span class="free-mobile">Free</span>
+              </div>
+            </div>
+            <span class="price-mobile dynamic-price" amount="1.00"></span>
+            <div class="headphones-quantity-container-mobile">
+              <img src="/assets/images/substract-button-small.svg" />
+              <span class="title-text-mobile">1</span>
+              <img src="/assets/images/add-button-small.svg" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="payment-section gray-section">
+        <div class="steps-container">
+          <span class="step-text step-text--success desktop small-desktop"
+            >Account</span
+          >
+          <img
+            class="desktop small-desktop"
+            src="/assets/images/step-success.svg"
+          />
+          <span class="step-text step-text--success">Shipping</span>
+          <img class="desktop" src="/assets/images/step-success.svg" />
+          <img class="mobile" src="/assets/images/step-success-small.svg" />
+          <span class="step-text">Payment</span>
+        </div>
+        <div class="form-container">
+          <block name="payment-form"></block>
+          <block name="smart-buttons"></block>
+        </div>
+      </section>
+      <section class="order-section gray-section desktop">
+        <div class="summary-container">
+          <div class="title-text title-text-summary">Order Summary</div>
+          <div class="mode-button">Test</div>
+        </div>
+        <div class="headphones-container">
+          <div class="headphones"></div>
+        </div>
+        <div class="headphones-description">
+          <div class="headphones-title-container">
+            <span class="title-text">Headphones</span>
+            <span class="important-title" amount="1.00"></span>
+          </div>
+          <div class="headphones-quantity-container">
+            <div class="quantity-button">
+              <img src="/assets/images/substract-button.svg" />
+            </div>
+            <span class="title-text">1</span>
+            <div class="quantity-button">
+              <img src="/assets/images/add-button.svg" />
+            </div>
+          </div>
+        </div>
+        <div class="discount-container">
+          <block name="smart-buttons">
+            <span class="discount-label">Gift Card / Discount code</span>
+            <div class="discount-input-container">
+              <div class="discount-input"></div>
+              <div class="discount-apply">
+                <span>Apply</span>
+              </div>
+            </div>
+          </block>
+        </div>
+        <div class="price-container">
+          <div class="price-line">
+            <span class="price-label">Sub Total</span>
+            <span class="price dynamic-price" amount="0.80"></span>
+          </div>
+          <div class="price-line">
+            <span class="price-label">Tax</span>
+            <span class="price dynamic-price" amount="{0,20"></span>
+          </div>
+          <div class="price-line">
+            <span class="price-label">Shipping</span>
+            <span class="free">Free</span>
+          </div>
+          <div class="price-line">
+            <span class="total-price-label"
+              >1.00
+              <i class="fa fa-refresh" onClick="saveConfig(true)"></i>
+            </span>
+            <span class="price dynamic-price" amount="1.00"></span>
+          </div>
+        </div>
+
+        <block name="spa"></block>
+      </section>
+    </div>
+  </body>
+</html>

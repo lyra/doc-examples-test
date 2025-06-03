@@ -1,0 +1,20 @@
+<extends src="base.html">
+  <block name="payment-form-load-zone">
+    <!-- themes should be loaded first -->
+    <link
+      rel="stylesheet"
+      href="{{ clientDomain }}/static/js/krypton-client/V4.0/ext/neon-reset.css"
+    />
+
+    <script src="{{ clientDomain }}/static/js/krypton-client/V4.0/ext/neon.min.js"></script>
+
+    <script type="module" src="paymentForm.js"></script>
+  </block>
+
+  <block name="payment-form">
+    <!-- payment form will be added here -->
+    <div id="myPaymentForm">
+      <div class="kr-smart-form" kr-grid kr-card-form-expanded></div>
+    </div>
+  </block>
+</extends>

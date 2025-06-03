@@ -11,6 +11,7 @@ const variables = JSON.parse(rawdata)
 global.vars = variables
 
 export default {
+  appType: "mpa",
   root: "./src",
   build: {
     outDir: "../dist",
@@ -20,9 +21,14 @@ export default {
             input: sync("./src/**/*.html".replace(/\\/g, "/")),
             }
         },
-  },
+    },
+    define: {env: variables},
   plugins: [
       posthtml({
-            plugins: [expressions({ locals: variables })]
-        })  ]
+          root: path.resolve(__dirname, 'src', 'parts'),
+          plugins: [
+              expressions({ locals: variables })
+          ]
+      }),
+    ]
 };

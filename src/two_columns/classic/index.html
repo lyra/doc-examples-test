@@ -1,0 +1,26 @@
+<extends src="base.html">
+  <block name="payment-form-load-zone">
+    <!-- Javascript library. Should be loaded in head section -->
+    <script
+      src="{{ clientDomain }}/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
+      kr-public-key="{{publicKey}}"
+      kr-form-token="{{formTokens.paymentMethods13}}"
+      kr-post-url-success="/paid.php"
+    ></script>
+
+    <!-- themes should be loaded after the javascript library -->
+    <link
+      rel="stylesheet"
+      href="{{ clientDomain }}/static/js/krypton-client/V4.0/ext/neon-reset.css"
+    />
+
+    <script src="{{ clientDomain }}/static/js/krypton-client/V4.0/ext/neon.min.js"></script>
+
+    <script src="paymentForm.js"></script>
+  </block>
+
+  <block name="payment-form">
+    <!-- payment form will be added here -->
+    <div class="kr-smart-form" kr-grid kr-card-form-expanded></div>
+  </block>
+</extends>
