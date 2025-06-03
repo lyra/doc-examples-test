@@ -1,17 +1,17 @@
 # Embedded Form samples
 
-It's an experimental repository. ** will be removed.\***
+It's an experimental repository, It will be removed soon.
 
-## single column
+## single column
 
 ![SmartForm](./src/assets/readme/single_column.png)
 
-- [Javascript implementation example][single_colmun/spa]
-- [Classic implementation][single_colmun/classic]
+- [Javascript implementation example](single_colmun/spa)
+- [Classic implementation](single_colmun/classic)
 
-## button only payment form
+## button only payment form
 
-## 2 columns
+## 2 columns
 
 ![SmartForm](./src/assets/readme/two_columns.png)
 
@@ -19,11 +19,11 @@ It's an experimental repository. ** will be removed.\***
 
 ## Icons only payment buttons
 
-## Radio button mode
+## Radio button mode
 
 ## payment method buttons in another place
 
-## popIn (single button payment form)
+## popIn (single button payment form)
 
 ## Currency conversion
 
