@@ -6,8 +6,8 @@ It's an experimental repository, It will be removed soon.
 
 ![SmartForm](./src/assets/readme/single_column.png)
 
-- [Javascript implementation example](single_colmun/spa)
-- [Classic implementation](single_colmun/classic)
+- [Javascript implementation example](./src/single_column/spa)
+- [Classic implementation](./src/single_column/classic)
 
 ## button only payment form
 
