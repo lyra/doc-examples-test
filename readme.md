@@ -2,7 +2,7 @@
 
 It's an experimental repository, It will be removed soon.
 
-## run the project
+## run the project
 
 Clone it and run:
 
