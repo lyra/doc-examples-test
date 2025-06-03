@@ -4,7 +4,7 @@
     <script
       src="{{ clientDomain }}/static/js/krypton-client/V4.0/stable/kr-payment-form.min.js"
       kr-public-key="{{publicKey}}"
-      kr-form-token="{{formTokens.paymentMethods13}}"
+      kr-form-token="{{formTokens.paymentMethods5}}"
       kr-post-url-success="/paid.php"
     ></script>
 
@@ -17,16 +17,14 @@
     <script src="{{ clientDomain }}/static/js/krypton-client/V4.0/ext/neon.min.js"></script>
 
     <script src="paymentForm.js"></script>
-
-    <style>
-      .kr-smart-form[kr-grid] {
-        width: 500px;
-      }
-    </style>
   </block>
 
   <block name="payment-form">
     <!-- payment form will be added here -->
-    <div class="kr-smart-form" kr-grid kr-card-form-expanded></div>
+    <div
+      class="kr-smart-form"
+      kr-card-form-expanded
+      kr-single-payment-button
+    ></div>
   </block>
 </extends>
